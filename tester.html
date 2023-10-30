@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbradius Testers</title>
+    <link rel="stylesheet" href="tester.css">
+    <link rel="icon" href="img\company_logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/9a9d277199.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 class="titulo">-¡Unete anuestro gran equipo de testers!-</h2>
+    <div class="form__container">
+        <form>
+            <h1>ingrese sus datos</h1>
+            <div class="imput__field">
+                <input id="name" type="text" placeholder="Nombre" class="imput-element" required/>
+            </div>
+            <div class="imput__field">
+                <input type="tel" id="telefono" placeholder="Número de teléfono" class="imput-element" required>
+            </div>
+            <div class="imput__field">
+                <input id="linkedin" type="text" placeholder="link de linkedin" class="imput-element" required/>
+            </div>
+            <button class="form__btn" id="sendbtn">Enviar datos</button>
+        </form>
+    </div>
+    <p>© 2023 UmbraDius - Todos los derechos reservados.</p>
+
+    <script>
+        // este script hace el chequeo de que todos los campos esten completos al enviar
+        document.getElementById('sendbtn').addEventListener('click', function(e) {
+        var name = document.getElementById('name').value;
+        var numero = document.getElementById('telefono').value;
+        let linkedin = document.getElementById('linkedin').value;    
+        if(name === "" || numero === "" || linkedin==="") {
+            alert("Por favor, complete todos los campos.");
+            e.preventDefault(); 
+        }
+        else{
+            alert("datos enviados con exito")
+        }
+    });</script>
+
+
+
+
+
+
+
+    <script src="pagina.js"></script>
+</body>
+</html>

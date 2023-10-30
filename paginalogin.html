@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbradius Log In</title>
+    <link rel="stylesheet" href="paginalogin.css">
+    <link rel="icon" href="img\company_logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/9a9d277199.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- este es el form y dentro de este tiene los campos a completar -->
+    <h1 class="titulo">-Crea una nueva cuenta-</h1>
+    <div class="form__container">
+        <input type="email" class="form__item" id="email" required placeholder="E_Mail">
+        <input type="password" class="form__item" id="pwd"  minlength="8" required placeholder="Contraseña"></imput>
+        <a href="pagina.html" class="form__link" id="linkBtn"><button id="submitBtn" class="form__btn"><i class="fa fa-user-plus"></i>&nbsp;Crear Cuenta</button></a>
+    </div>
+    <div class="footer__container">
+        <p>© 2023 UmbraDius - Todos los derechos reservados.</p>
+    </div>
+    <script>
+        // Esto previene el evento predeterminado del enlace
+        document.getElementById('linkBtn').addEventListener('click', function(e) {
+        var email = document.getElementById('email').value;
+        var pwd = document.getElementById('pwd').value;
+        let email1 = document.getElementById('email').value;    
+        if(email === "" || pwd === "") {
+            alert("Por favor, complete todos los campos.");
+            e.preventDefault(); 
+        }
+    });</script>
+
+
+
+
+
+
+
+
+    <script src="pagina.js"></script>
+</body>
+</html>
